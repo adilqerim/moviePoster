@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ProgressBar
+                android:id="@+id/progressbar1"
+                android:max="100"
+                android:progress="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="@+id/movie_imageView" android:layout_marginTop="130dp"/>
+
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:id="@+id/movie_imageView" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                tools:text="Name of Movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_name" app:layout_constraintStart_toStartOf="@+id/movie_imageView"
+                app:layout_constraintEnd_toEndOf="@+id/movie_imageView" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/movie_imageView" android:textSize="18sp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name" android:id="@+id/linearLayout">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_weight="1">
+                <TextView
+                        tools:text="Country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/countries_textView" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp"/>
+                <TextView
+                        tools:text="Actors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/actors_textView"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/countries_textView"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_name" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_weight="0.5">
+                <TextView
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_textView" tools:text="Rating" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_name"/>
+                <TextView
+                        android:layout_gravity="end"
+                        tools:text="Vote Count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:id="@+id/vote_count_textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/rating_textView"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
